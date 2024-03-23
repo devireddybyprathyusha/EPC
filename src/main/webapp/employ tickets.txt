@@ -1,0 +1,49 @@
+Report Development Tool....
+	Admin
+	         Login:
+	         input:   Ticket Management (Entry)
+		                  Ticket ID........
+		                   Name.....
+		                   Date of ticket....
+		                   assigned.......
+		                   date of start...
+		                   date of end...
+		                   status....
+		                   
+	         output:      Ticket Report
+	                      Ticket Status (Comp/progress)
+	                      Edit/Delete Records
+	                      
+	         upload file;
+	         download file :
+	         
+	         Contact us:
+	         
+	         Logout:
+	         
+	         
+	                    
+	                      
+	                      
+	                       
+	          
+	      
+Languague[Java]:  jsp(Java Servlet Pages)/html (java script)/mysql/tomcat/core java/JDBC/Servlets
+-------------------------------------------------------------------------------------
+
+
+create database report;
+use report;
+
+create table  ticket(
+ticketid      int,
+ticketname   varchar(200),
+dot 	   varchar(200),
+dos	   varchar(200),
+doe	 varchar(200),
+assigned     varchar(200),
+status	 varchar(200),
+tinfo	varchar(200));
+
+
+		
