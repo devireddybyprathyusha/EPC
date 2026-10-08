@@ -25,14 +25,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/FileDownload")
 public class FileDownload extends HttpServlet {
  
-    // size of byte buffer to send file
+   
     private static final int BUFFER_SIZE = 4096; 
      
    
      
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        // get upload id from URL's parameters
+       
         int uploadId = Integer.parseInt(request.getParameter("id"));
          String fname=request.getParameter("profile");
         Connection conn = null; // connection to the database
