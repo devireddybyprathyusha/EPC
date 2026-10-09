@@ -38,11 +38,11 @@ public class FileDownload extends HttpServlet {
         Connection conn = null; // connection to the database
          
         try {
-            // connects to the database
+           
         	 DriverManager.registerDriver(new com.mysql.jdbc.Driver());
         	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/report","root","root");
  
-            // queries the database
+            
             String sql = "SELECT * FROM filesupload WHERE upload_id = ? OR file_name=?";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setInt(1, uploadId);
@@ -83,10 +83,7 @@ public class FileDownload extends HttpServlet {
                  
                 inputStream.close();
                 outStream.close();             
-            } else {
-                // no file found
-                response.getWriter().print("File not found for the id:&  " + uploadId);  
-            }
+            } 
         } catch (SQLException ex) {
             ex.printStackTrace();
             response.getWriter().print("SQL Error: " + ex.getMessage());
